@@ -13,15 +13,15 @@ end
 
 p fibonacci_iterative(8)
 
-def fibs_rec(n)
+def fibonacci_recursive(n)
   if n == 0
   [0]
   elsif n == 1
   [0, 1]
   else
-  array = fibs_rec(n - 1)
+  array = fibonacci_recursive(n - 1)
   array << array[-2] + array[-1]
 end
 end
 
-p fibs_rec(8)
+p fibonacci_recursive(8)
