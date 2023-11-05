@@ -1,7 +1,7 @@
 def fibonacci_iterative(num)
  fib_array = [0, 1]
  i = 2
- while i < num
+ while i <= num
     prev_num = fib_array[i - 1]
     second_prev_num = fib_array[i - 2]
     new_num = prev_num + second_prev_num
@@ -12,3 +12,16 @@ def fibonacci_iterative(num)
 end
 
 p fibonacci_iterative(8)
+
+def fibs_rec(n)
+  if n == 0
+  [0]
+  elsif n == 1
+  [0, 1]
+  else
+  array = fibs_rec(n - 1)
+  array << array[-2] + array[-1]
+end
+end
+
+p fibs_rec(8)
